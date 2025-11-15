@@ -1,10 +1,9 @@
-import Form from "./components/Form";
+import MainInfo from "./components/MainInfo.jsx"
 
 const App = () => {
   return (
     <main>
-      <h1>Enter infomration</h1>
-      <Form />
+      <MainInfo />
     </main>
   )
 };
