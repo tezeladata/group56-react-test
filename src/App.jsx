@@ -1,10 +1,10 @@
-import Button from "./components/Button.jsx";
+import Form from "./components/Form";
 
 const App = () => {
   return (
     <main>
-      <h1>Welcome</h1>
-      <Button />
+      <h1>Enter infomration</h1>
+      <Form />
     </main>
   )
 };
