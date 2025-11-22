@@ -1,24 +1,9 @@
-import Students from "./components/Students";
+import Comp1 from "./components/Comp1";
 
 const App = () => {
-  const students = [
-    {name: "Aleksandre", surname: "Wowkolauri"},
-    {name: "Giorgi", surname: "Jioshvili"},
-    {name: "Davit", surname: "Chokheli"},
-    {name: "Datuna", surname: "Sisauri"},
-    {name: "Luka", surname: "Amashukeli"},
-    {name: "Luka", surname: "Ivanishvili"},
-    {name: "Luka", surname: "Tsikhelashvili"},
-    {name: "Mate", surname: "Chubinidze"},
-    {name: "Rezi", surname: "Kurdadze"},
-    {name: "Saba", surname: "Sabanashvili"},
-    {name: "Soso", surname: "Rtveliashvili"},
-    {name: "Tato", surname: "Mchedlidze"}
-  ]
-
   return (
     <main>
-      <Students studentsArr={students} />
+      <Comp1 signedIn={Math.random() > 0.5}/>
     </main>
   )
 };
