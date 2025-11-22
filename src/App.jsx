@@ -1,9 +1,15 @@
-import Comp1 from "./components/Comp1";
+import Info from "./components/Info.jsx"
 
 const App = () => {
+  const logInfo = () => {
+    return (
+      <p>David Tezelashvili</p>
+    )
+  }
+
   return (
     <main>
-      <Comp1 signedIn={Math.random() > 0.5}/>
+      <Info logInfo={logInfo}/>
     </main>
   )
 };
