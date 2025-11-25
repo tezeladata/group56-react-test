@@ -1,5 +1,12 @@
-const Info = ({logInfo}) => {
-    return logInfo()
+const Info = (props) => {
+    console.log(props.children)
+
+    return (
+        <>
+            {props.children}
+            <hr />
+        </>
+    )
 }
 
-export default Info
+export default Info;

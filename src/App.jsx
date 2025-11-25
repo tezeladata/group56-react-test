@@ -1,15 +1,20 @@
 import Info from "./components/Info.jsx"
 
 const App = () => {
-  const logInfo = () => {
-    return (
-      <p>David Tezelashvili</p>
-    )
-  }
-
   return (
     <main>
-      <Info logInfo={logInfo}/>
+      <Info />
+
+      <Info>
+        hello world!
+      </Info>
+
+      <Info>
+        <div>
+          <p>info 3</p>
+          <h2>h2 for info 3</h2>
+        </div>
+      </Info>
     </main>
   )
 };
