@@ -1,10 +1,7 @@
-const Info = (props) => {
-    console.log(props.children)
-
+const Info = ({textContent="this is paragraph"}) => {
     return (
         <>
-            {props.children}
-            <hr />
+            <p>{textContent}</p>
         </>
     )
 }

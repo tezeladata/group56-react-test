@@ -5,16 +5,7 @@ const App = () => {
     <main>
       <Info />
 
-      <Info>
-        hello world!
-      </Info>
-
-      <Info>
-        <div>
-          <p>info 3</p>
-          <h2>h2 for info 3</h2>
-        </div>
-      </Info>
+      <Info textContent="hello" />
     </main>
   )
 };
