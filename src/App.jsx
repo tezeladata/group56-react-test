@@ -1,11 +1,9 @@
-import Info from "./components/Info.jsx"
+import Button from "./components/Button";
 
 const App = () => {
   return (
     <main>
-      <Info />
-
-      <Info textContent="hello" />
+      <Button />
     </main>
   )
 };
