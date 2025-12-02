@@ -1,9 +1,9 @@
-import Info from "./components/Info";
+import Text from "./components/Text";
 
 const App = () => {
   return (
     <main>
-      <Info />
+      <Text />
     </main>
   )
 };
