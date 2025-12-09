@@ -1,10 +1,9 @@
-import Shop from "./components/Shop";
-
+import Comp1 from "./components/Comp1";
 
 const App = () => {
   return (
     <main>
-      <Shop />
+      <Comp1 />
     </main>
   )
 };
