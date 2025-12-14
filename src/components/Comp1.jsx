@@ -1,47 +1,25 @@
 import { useEffect, useState } from "react";
 
 const Comp1 = () => {
-    const [products, setProducts] = useState([]);
+    const [city, setCity] = useState("")
 
     const getData = async (apiLink) => {
-        try {
-            const data = await fetch(apiLink);
-            const result = await data.json();
-
-            setProducts(result)
-        } catch (error) {
-            console.log(error)
-        }
+        const data = await fetch(apiLink);
+        const result = await data.json();
+        console.log(result)
     }
 
     useEffect(() => {
-        getData("https://fakestoreapi.com/products")
-    }, [])
+        getData(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9f7bccc5ba28c48440a7cbf119764bd2`)
+    }, [city])
 
     return (
         <>
-            <section>
-                {
-                    products.map((el, i) => (
-                        <div key={i}>
-                            <h1>{el.title}</h1>
-                            <p>{el.description.split(" ").slice(0, 10).join(" ")}</p>
-                            <p><b>Category:</b> {el.category}</p>
-
-                            <br /><br />
-
-                            <img src={el.image} alt={el.description.split(" ").slice(0, 10).join(" ")} style={{"maxWidth": "400px"}} />
-
-                            <br /><br />
-
-                            <p><b>Price:</b> {el.price}</p>
-                            <button>Buy now</button>
-                        </div>
-                    ))
-                }
-            </section>
+            <form>
+                <input type="text" placeholder="Enter city name: " onChange={({target}) => setCity(prev => target.value)} />
+            </form>
         </>
     )
 };
 
-export default Comp1
+export default Comp1;
