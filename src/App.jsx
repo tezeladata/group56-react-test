@@ -1,9 +1,10 @@
-import Comp1 from "./components/Comp1";
+import Width from "./components/Width";
+
 
 const App = () => {
   return (
     <main>
-      <Comp1 />
+      <Width />
     </main>
   )
 };
