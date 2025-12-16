@@ -1,24 +1,37 @@
 import { useEffect, useState } from "react";
 
 const Comp1 = () => {
-    const [city, setCity] = useState("")
+    const [users, setUsers] = useState([]);
 
-    const getData = async (apiLink) => {
-        const data = await fetch(apiLink);
-        const result = await data.json();
-        console.log(result)
-    }
+    const getInfo = async (apiLink) => {
+        try {
+            const res = await fetch(apiLink);
+            const data = await res.json();
+            setUsers(data)
+        } catch (error) {
+            console.error(error)
+        }
+    };
 
     useEffect(() => {
-        getData(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9f7bccc5ba28c48440a7cbf119764bd2`)
-    }, [city])
+        getInfo("https://jsonplaceholder.typicode.com/users")
+    }, [])
 
     return (
-        <>
-            <form>
-                <input type="text" placeholder="Enter city name: " onChange={({target}) => setCity(prev => target.value)} />
-            </form>
-        </>
+        <section>
+            <ul>
+                {
+                    users.map((user, ind) => (
+                        <li key={ind}>
+                            <p><b>Name:</b> {user.name}</p>
+                            <p><b>Phone:</b> {user.phone}</p>
+                            <p><b>Email:</b> {user.email}</p>
+                            <p><b>Website:</b> {user.website}</p>
+                        </li>
+                    ))
+                }
+            </ul>
+        </section>
     )
 };
 
