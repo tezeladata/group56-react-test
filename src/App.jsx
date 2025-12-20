@@ -1,9 +1,9 @@
-import Comp1 from "./components/Comp1";
+import Container from "./components/container/Container";
 
 const App = () => {
   return (
     <main>
-      <Comp1 />
+      <Container />
     </main>
   )
 };
