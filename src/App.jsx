@@ -1,15 +1,9 @@
-import About from "./components/About";
-import Main from "./components/Main";
-import Members from "./components/Members";
-import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
     <>
-      <Navbar />
-      <Main />
-      <About />
-      <Members />
+      <Home />
     </>
   )
 };

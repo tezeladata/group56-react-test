@@ -1,20 +1,26 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-
-.oswald {
-    font-family: "Oswald";
-}
 
 @layer base {
   @font-face {
-    font-family: 'amore';
+    font-family: 'OpenSans';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("./assets/fonts/Amore\ Christmas.otf") format('otf');
+    src: url("./assets/fonts/OpenSans-Medium.ttf") format('TrueType');
   }
 }
 
-.amore {
-    font-family: "amore";
+.opensans {
+    font-family: "OpenSans";
+}
+
+.linearBg1 {
+  background: #D25281;
+  background: linear-gradient(90deg, rgba(210, 82, 129, 1) 0%, rgba(226, 106, 77, 1) 100%);
+}
+
+.shadow1 { 
+  box-shadow: 10px 10px 34px -2px rgba(226,106,77,0.65);
+  -webkit-box-shadow: 10px 10px 34px -2px rgba(226,106,77,0.65);
+  -moz-box-shadow: 10px 10px 34px -2px rgba(226,106,77,0.65);
 }
