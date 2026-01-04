@@ -1,9 +1,9 @@
-import Home from "./pages/Home";
+import Comp from "./components/Comp";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <Comp />
     </>
   )
 };
