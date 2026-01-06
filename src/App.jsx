@@ -1,14 +1,11 @@
-import { HemisphereDisplay } from "./components/HemisphereDisplay";
-import { LongitudeLatitudeDisplay } from "./components/LongitudeLatitudeDisplay";
+import Comp from "./components/Comp";
+import Comp2 from "./components/Comp2";
 
 const App = () => {
   return (
     <>
-      <main>
-        <h1>Geo Locator</h1>
-        <LongitudeLatitudeDisplay />
-        <HemisphereDisplay />
-      </main>
+      <Comp />
+      <Comp2 />
     </>
   )
 };
