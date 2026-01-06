@@ -2,14 +2,14 @@ import { useContext } from "react";
 import { MyContext } from "../context/MyContext";
 
 const Comp = () => {
-    // context-ში გაზიარებული ინფორმაცია გადმოვიტანოთ ამ კომპონენტში
-    // ვიყენებთ useContext კაუჭს და მას გადავცემთ ჩვენს კონტექსტს
-    const info = useContext(MyContext)
-    console.log(`I component: ${info}`)
+    const {count} = useContext(MyContext);
+    console.log(count)
 
     return (
         <>
-        
+            <hr />
+            <p>{count}</p>
+            <hr />
         </>
     )
 };
